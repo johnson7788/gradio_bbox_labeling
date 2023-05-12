@@ -114,7 +114,6 @@ def get_one_images(brand="资生堂", idx=0, bbox_num=-1, topk=4):
     """
     只获取jpg格式的图片
     """
-    # res = {'data': {'bbox_candidates': [[{'label': '欧莱雅新多重防护隔离液 水感倍护', 'url': 'http://192.168.50.189:7794/api/image/2018'}, {'label': '欧莱雅新多重防护隔离露 水感轻肌', 'url': 'http://192.168.50.189:7794/api/image/1227'}, {'label': '欧莱雅新多重防护隔离液 水感倍护', 'url': 'http://192.168.50.189:7794/api/image/2019'}, {'label': '欧莱雅新多重防护隔离液 水感倍护', 'url': 'http://192.168.50.189:7794/api/image/2017'}], [{'label': '欧莱雅多重防护隔离露 素颜亮采', 'url': 'http://192.168.50.189:7794/api/image/2034'}, {'label': '欧莱雅多重防护隔离露 素颜亮采', 'url': 'http://192.168.50.189:7794/api/image/2035'}, {'label': '欧莱雅小光圈喷雾', 'url': 'http://192.168.50.189:7794/api/image/572'}, {'label': '欧莱雅小光圈喷雾', 'url': 'http://192.168.50.189:7794/api/image/573'}], [{'label': '欧莱雅新多重防护隔离露 外御内护', 'url': 'http://192.168.50.189:7794/api/image/865'}, {'label': '欧莱雅新多重防护隔离露 外御内护', 'url': 'http://192.168.50.189:7794/api/image/866'}, {'label': '欧莱雅防脱精华液（小黑喷）', 'url': 'http://192.168.50.189:7794/api/image/1533'}, {'label': '欧莱雅清润葡萄籽水嫩洁面乳', 'url': 'http://192.168.50.189:7794/api/image/453'}], [{'label': '欧莱雅多重防护隔离露 素颜亮采', 'url': 'http://192.168.50.189:7794/api/image/2034'}, {'label': '欧莱雅多重防护隔离露 素颜亮采', 'url': 'http://192.168.50.189:7794/api/image/2035'}, {'label': '欧莱雅小光圈喷雾', 'url': 'http://192.168.50.189:7794/api/image/573'}, {'label': '欧莱雅小光圈喷雾', 'url': 'http://192.168.50.189:7794/api/image/572'}]], 'bbox_num': 4, 'bboxes': [[243.12725830078125, 236.93186950683594, 384.913330078125, 798.8110961914062], [617.3644409179688, 537.275146484375, 689.0697021484375, 793.4158935546875], [392.7101745605469, 274.6469421386719, 526.1124267578125, 779.217041015625], [546.1234130859375, 518.9520874023438, 618.5255737304688, 779.0012817382812]], 'brand': '欧莱雅', 'classes': ['欧莱雅新多重防护隔离液 水感倍护', '欧莱雅多重防护隔离露 素颜亮采', '欧莱雅新多重防护隔离露 外御内护', '欧莱雅多重防护隔离露 素颜亮采'], 'idx': 0, 'pic': 'https://img.alicdn.com/bao/uploaded/i2/533497499/O1CN013lPzGf25GarIgfTLm_!!0-item_pic.jpg', 'pic_height': 800, 'pic_path': '/home/wac/johnson/.cache/torch/mmf/data/datasets/retrieval_tmall/images/欧莱雅多重防护隔离露外御内护SPF50+/PA++++/5b982513c60f299b65a1758cbb1e543e.jpg', 'pic_width': 800, 'product': '欧莱雅新多重防护隔离露 外御内护', 'product_img': 'http://img.lavector.com/lavectorimages/da38d7c5c89b3726c2b390aab912be6d.jpg', 'scores': [0.8991537094116211, 0.891562283039093, 0.8848311305046082, 0.8565376996994019], 'title': '欧莱雅防晒小金管面部身体防晒霜隔离霜保湿防紫外线防晒乳SPF50+', 'total': 919, 'url': 'https://detail.tmall.com/item.htm?id=589262335068&skuId=4987740194300&user_id=533497499&cat_id=2&is_b=1&rn=55405dcc52257da2e15b82337a6861fc'}, 'has_label': False, 'msg': 'success', 'status': 0}
     return res
 
 def do_query(query_txt):
@@ -124,7 +123,7 @@ def do_query(query_txt):
         query_txt (): 产品名称或别名,"资生堂新男士焕能紧致眼霜"
     Returns:
     """
-    picture_url = data["picture_url"]  #'http://img.lavector.com/lavectorimages/da38d7c5c89b3726c2b390aab912be6d.jpg'
+    picture_url = data["picture_url"]  #'da38d7c5c89b3726c2b390aab912be6d.jpg'
     official_name = data["official_name"]  #'欧莱雅新多重防护隔离露 外御内护'
     return official_name, picture_url
 
