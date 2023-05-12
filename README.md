@@ -6,13 +6,13 @@ BBox Annotation Tool
 
 This tool is a BBox annotation tool developed using Gradio tool, inspired by https://github.com/pkuliyi2015/multidiffusion-upscaler-for-automatic1111.
 Features
-This tool implements the following features:
-    Images are obtained by backend requests instead of local image search, making it easier to control the number of brands and BBoxes already annotated online.
-    The annotation data is stored in a MySQL database and called using a backend API.
-    Users can search for unannotated items of the same brand, and items with the same name are returned in order.
-    The search results for images are limited by the number of BBoxes, allowing simpler items to be annotated first so that the model can assist in annotating more complex items.
-    The "previous" and "next" buttons will first search the annotated database. If the image is found, it will be returned directly. If not, YOLO will be used for assistance annotation.
-    The "next" button will automatically trigger the current page's annotation data to be saved and search for the next image.
+## This tool implements the following features:
+* Images are obtained by backend requests instead of local image search, making it easier to control the number of brands and BBoxes already annotated online.
+* The annotation data is stored in a MySQL database and called using a backend API.
+* Users can search for unannotated items of the same brand, and items with the same name are returned in order.
+* The search results for images are limited by the number of BBoxes, allowing simpler items to be annotated first so that the model can assist in annotating more complex items.
+* The "previous" and "next" buttons will first search the annotated database. If the image is found, it will be returned directly. If not, YOLO will be used for assistance annotation.
+* The "next" button will automatically trigger the current page's annotation data to be saved and search for the next image.
     Users can search for precise or fuzzy product names, and the image search API will automatically search for comparison images to facilitate annotation.
     The name of the BBox is changed to the name of the color, making it easier for users to locate the BBox they want to modify.
     The label displayed on the image is changed to the upper left corner for easy viewing.
@@ -24,11 +24,13 @@ This tool implements the following features:
     Keyboard shortcuts: skip "J", query "Q", previous "W", next "S"
     Multiple candidate BBox prediction results are displayed, and when the user clicks on a link, the link is automatically displayed.
 
-Notes
+# Notes
 When a new BBox is enabled, it cannot be moved if the label is "none". You need to change the label to a new name before you can move it.
 
 
-How to run
+# How to run
+```
 pip install gradio
 python bbox_labeling.py
+```
 
