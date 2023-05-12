@@ -262,7 +262,7 @@ def get_first_image():
     获取第一张图片，占位显示用
     Returns:
     """
-    img_path = "tempdir/2e60fe6c7adb6308c89a81e4f28605fe.jpg"
+    img_path = "a.jpg"
     assert os.path.exists(img_path), f"图片不存在: {img_path}"
     img_array = show_img(img_path)
     return img_array
